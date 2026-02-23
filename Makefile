@@ -3,7 +3,7 @@
 #################################################################################
 
 PROJECT_NAME = MP2_ImbalancedClassification
-PYTHON_VERSION = 3.1
+PYTHON_VERSION = 3.11
 PYTHON_INTERPRETER = python
 
 #################################################################################
@@ -75,3 +75,10 @@ export PRINT_HELP_PYSCRIPT
 
 help:
 	@$(PYTHON_INTERPRETER) -c "${PRINT_HELP_PYSCRIPT}" < $(MAKEFILE_LIST)
+
+
+## Run reproducible Project 2 pipeline
+.PHONY: run_repro
+run_repro:
+	$(PYTHON_INTERPRETER) scripts/project2_repro.py
+

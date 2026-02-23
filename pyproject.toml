@@ -13,10 +13,8 @@ authors = [
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    
 ]
-requires-python = "~=3.1.0"
-
+requires-python = ">=3.10,<3.13"
 
 [tool.ruff]
 line-length = 99
@@ -24,9 +22,8 @@ src = ["MP2_ImbalancedClassification"]
 include = ["pyproject.toml", "MP2_ImbalancedClassification/**/*.py"]
 
 [tool.ruff.lint]
-extend-select = ["I"]  # Add import sorting
+extend-select = ["I"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["MP2_ImbalancedClassification"]
 force-sort-within-sections = true
-
