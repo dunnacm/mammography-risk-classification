@@ -1,11 +1,5 @@
-pip
-python-dotenv
-ruff
--e .
-pandas
-numpy
-matplotlib
-shap
-scikit-learn
-scipy
-imbalanced-learn
+numpy>=1.26,<3
+pandas>=2.2,<3
+scipy>=1.11,<2
+scikit-learn>=1.5,<1.8
+imbalanced-learn>=0.13,<0.15

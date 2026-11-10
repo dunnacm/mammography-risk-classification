@@ -1,0 +1,283 @@
+{
+  "analysis_version": "2026-11-10-reviewed",
+  "status": "educational rerun of previously inspected data; not fresh external validation",
+  "data_sha256": "a5475b88aa0373c2dd530c165ea5e6805a93d4e0a870e982479dc59723e9ee7b",
+  "data_file": "Mammography.csv",
+  "rows": 11183,
+  "features": [
+    "attr1",
+    "attr2",
+    "attr3",
+    "attr4",
+    "attr5",
+    "attr6"
+  ],
+  "labels": [
+    -1,
+    1
+  ],
+  "class_counts": {
+    "-1": 10923,
+    "1": 260
+  },
+  "unique_feature_profiles": 7848,
+  "repeated_feature_profile_rows": 3335,
+  "feature_profiles_with_conflicting_labels": 1,
+  "partition": {
+    "method": "profile",
+    "model_seed": 42,
+    "split_seed": null,
+    "cv_seed": null,
+    "cv_splits": 5,
+    "group_allocation": "deterministic, first outer fold",
+    "train_rows": 7809,
+    "test_rows": 3374,
+    "test_fraction": 0.301707949566306,
+    "overlapping_profile_groups": 0,
+    "train_positive": 208,
+    "test_positive": 52
+  },
+  "selection": {
+    "metric": "training CV balanced accuracy",
+    "selected_model": "smote_rf",
+    "test_used_for_selection": false
+  },
+  "cv": {
+    "baseline_rf": {
+      "folds": [
+        0.7721647869674186,
+        0.7493421052631579,
+        0.7920254646333446,
+        0.7847274436090226,
+        0.7063302310654686
+      ],
+      "mean": 0.7609180063076824,
+      "std_descriptive": 0.030902686078024197
+    },
+    "weighted_rf": {
+      "folds": [
+        0.7728226817042607,
+        0.7132988721804511,
+        0.7673064896329437,
+        0.7255325814536341,
+        0.7069881258023106
+      ],
+      "mean": 0.73718975015472,
+      "std_descriptive": 0.02755186220074601
+    },
+    "smote_rf": {
+      "folds": [
+        0.85687656641604,
+        0.8856203007518797,
+        0.8701592341367201,
+        0.8862781954887218,
+        0.8312660462130937
+      ],
+      "mean": 0.8660400686012911,
+      "std_descriptive": 0.02050920379266297
+    },
+    "tuned_grid": {
+      "mean": 0.7632912412242421,
+      "selection_score_optimistic": true,
+      "best_params": {
+        "classifier": "RandomForestClassifier(n_jobs=1, random_state=42)",
+        "classifier__n_estimators": "300"
+      }
+    }
+  },
+  "test_metrics": {
+    "baseline_rf": {
+      "n": 3374,
+      "positive_support": 52,
+      "confusion_matrix_labels": [
+        -1,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          3322,
+          0
+        ],
+        [
+          22,
+          30
+        ]
+      ],
+      "accuracy": 0.993479549496147,
+      "balanced_accuracy": 0.7884615384615384,
+      "positive_precision": 1.0,
+      "positive_recall": 0.5769230769230769,
+      "specificity": 1.0,
+      "positive_f1": 0.7317073170731707,
+      "macro_f1": 0.8642034935200837,
+      "g_mean": 0.7595545253127499,
+      "roc_auc": 0.9134615384615384,
+      "average_precision": 0.8295905339473804
+    },
+    "weighted_rf": {
+      "n": 3374,
+      "positive_support": 52,
+      "confusion_matrix_labels": [
+        -1,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          3322,
+          0
+        ],
+        [
+          24,
+          28
+        ]
+      ],
+      "accuracy": 0.992886781268524,
+      "balanced_accuracy": 0.7692307692307692,
+      "positive_precision": 1.0,
+      "positive_recall": 0.5384615384615384,
+      "specificity": 1.0,
+      "positive_f1": 0.7,
+      "macro_f1": 0.8482003599280143,
+      "g_mean": 0.7337993857053428,
+      "roc_auc": 0.9038461538461539,
+      "average_precision": 0.8106561488304228
+    },
+    "smote_rf": {
+      "n": 3374,
+      "positive_support": 52,
+      "confusion_matrix_labels": [
+        -1,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          3322,
+          0
+        ],
+        [
+          15,
+          37
+        ]
+      ],
+      "accuracy": 0.9955542382928275,
+      "balanced_accuracy": 0.8557692307692308,
+      "positive_precision": 1.0,
+      "positive_recall": 0.7115384615384616,
+      "specificity": 1.0,
+      "positive_f1": 0.8314606741573034,
+      "macro_f1": 0.9146040418391262,
+      "g_mean": 0.8435273922869734,
+      "roc_auc": 0.9230769230769231,
+      "average_precision": 0.848524919064338
+    },
+    "tuned_grid": {
+      "n": 3374,
+      "positive_support": 52,
+      "confusion_matrix_labels": [
+        -1,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          3322,
+          0
+        ],
+        [
+          22,
+          30
+        ]
+      ],
+      "accuracy": 0.993479549496147,
+      "balanced_accuracy": 0.7884615384615384,
+      "positive_precision": 1.0,
+      "positive_recall": 0.5769230769230769,
+      "specificity": 1.0,
+      "positive_f1": 0.7317073170731707,
+      "macro_f1": 0.8642034935200837,
+      "g_mean": 0.7595545253127499,
+      "roc_auc": 0.9134615384615384,
+      "average_precision": 0.8295905339473805
+    },
+    "always_negative": {
+      "n": 3374,
+      "positive_support": 52,
+      "confusion_matrix_labels": [
+        -1,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          3322,
+          0
+        ],
+        [
+          52,
+          0
+        ]
+      ],
+      "accuracy": 0.9845880260818021,
+      "balanced_accuracy": 0.5,
+      "positive_precision": 0.0,
+      "positive_recall": 0.0,
+      "specificity": 1.0,
+      "positive_f1": 0.0,
+      "macro_f1": 0.49611708482676226,
+      "g_mean": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.015411973918197985
+    }
+  },
+  "permutation_importance": {
+    "model": "smote_rf",
+    "scoring": "balanced_accuracy",
+    "repeats": 5,
+    "features": [
+      {
+        "feature": "attr1",
+        "mean": 0.08461538461538473,
+        "std": 0.0038461538461538767
+      },
+      {
+        "feature": "attr2",
+        "mean": 0.20961538461538476,
+        "std": 0.0038461538461538767
+      },
+      {
+        "feature": "attr3",
+        "mean": -0.0019230769230769162,
+        "std": 0.0038461538461538325
+      },
+      {
+        "feature": "attr4",
+        "mean": 0.34423076923076934,
+        "std": 0.0038461538461538767
+      },
+      {
+        "feature": "attr5",
+        "mean": 0.06538461538461546,
+        "std": 0.0038461538461538767
+      },
+      {
+        "feature": "attr6",
+        "mean": 0.09423076923076934,
+        "std": 0.0038461538461538325
+      }
+    ]
+  },
+  "limitations": [
+    "Exact profiles are not patient IDs; repeated profiles do not prove duplicate patients.",
+    "Profile grouping measures generalization to unseen exact profiles, unlike ordinary row splitting.",
+    "Historical dataset/test information was already inspected; this is reproduction, not prospective validation.",
+    "CV means used for selection are optimistic; fold SD is not a confidence interval.",
+    "Feature semantics/units, patient identity and collection sampling are not established by the local CSV.",
+    "No calibrated clinical risk, clinical utility or causal inference is established."
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.7.2",
+    "imbalanced-learn": "0.14.2"
+  }
+}

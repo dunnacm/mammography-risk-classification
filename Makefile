@@ -80,5 +80,5 @@ help:
 ## Run reproducible Project 2 pipeline
 .PHONY: run_repro
 run_repro:
-	$(PYTHON_INTERPRETER) scripts/project2_repro.py
+	$(PYTHON_INTERPRETER) scripts/reviewed_analysis.py
 
